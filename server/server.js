@@ -7,3 +7,7 @@ server.use(express.json())
 server.use(express.static(path.join(__dirname, 'public')))
 
 module.exports = server
+
+// const rubbishRoutes = require('./routes/rubbish')
+
+// server.use('/api/v1/rubbish', rubbishRoutes)
