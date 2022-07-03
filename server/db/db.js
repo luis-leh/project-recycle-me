@@ -1,15 +1,18 @@
-// conde environment = process.env.NODE_ENV || 'developoment'
+const environment = process.env.NODE_ENV || 'developoment'
 
-// const config = require('./knexfile')[environment]
+const config = require('./knexfile')[environment]
 
-// const db = require('knex')(config)
+const db = require('knex')(config)
 
-// db function go here
+// DB FUNCTIONS GO HERE
 
-// get
+// GET
+function getAllRecyclables() {
+  return db('recyclables').select()
+}
 
-// post
+// POST
+// UPDATE
+// DELETE
 
-// update
-
-// module.exports = {}
+module.exports = { db, getAllRecyclables }
