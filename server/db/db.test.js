@@ -7,7 +7,7 @@ const {
   getAllRecyclables,
   getAllOrganics,
   getAllGeneral,
-  // getAllWaste,
+  getAllWaste,
 } = require('./db')
 
 beforeAll(() => {
@@ -45,11 +45,12 @@ describe('getAllGeneral', () => {
   })
 })
 
-// describe('getAllWaste', () => {
-//   test('This function should get all kinds of waste from the database', () => {
-//     return getAllWaste().then((result) => {
-//       console.log(result)
-//       expect(result).toHaveLength(34)
-//     })
-//   })
-// })
+// -----TEST STILL FAILING-----
+describe('getAllWaste', () => {
+  test('This function should get all kinds of waste from the database', () => {
+    return getAllWaste().then((result) => {
+      console.log(result)
+      expect(result).toHaveLength(34)
+    })
+  })
+})
