@@ -19,9 +19,15 @@ function getAllGeneral() {
   return db('general').select()
 }
 
+// -----STILL NOT WORKING-----
+// -----SCRAPPED IDEA / NOT IDEAL-----
 // function getAllWaste() {
 //   return db('recyclables', 'organics', 'general')
-//     .join('recyclables', 'organics', 'general')
+//     .join(
+//       'recyclables.recyclable_id',
+//       'organics.organic_id',
+//       'general.general_id'
+//     )
 //     .select()
 // }
 

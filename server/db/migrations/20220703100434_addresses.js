@@ -6,8 +6,9 @@
 exports.up = (knex) => {
   return knex.schema.createTable('addresses', (table) => {
     table.increments('address_id').primary()
-    table.string('address')
-    table.integer('address_user_id').references('user_id')
+    table.string('address_street')
+    table.string('address_suburb')
+    table.string('address_city')
   })
 }
 
