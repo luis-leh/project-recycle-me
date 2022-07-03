@@ -1,8 +1,4 @@
-/**
- * @param { import("knex").Knex } knex
- * @returns { Promise<void> }
- */
-exports.up = function (knex) {
+exports.up = (knex) => {
   return knex.schema.createTable('recyclables', (table) => {
     table.increments('recyclable_id').primary()
     table.string('recyclable_item')
