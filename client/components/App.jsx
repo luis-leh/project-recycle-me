@@ -1,4 +1,7 @@
 import React from 'react'
+import Recyclables from './Recyclables'
+import Organics from './Organics'
+import General from './General'
 
 function App () {
   return (
@@ -8,7 +11,9 @@ function App () {
         <img className="headerImage" src="./images/recycling-symbol-1.png" alt="Recyling symbol arrows" />
       </header>
       <section className="main">
-        {/* add your code here */}
+        {/* <Recyclables />
+        <Organics />
+        <General /> */}
       </section>
     </>
   )
