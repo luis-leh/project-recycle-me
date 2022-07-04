@@ -13,8 +13,6 @@ function App () {
       </header>
       <section className="main">
         <div><Recyclables /></div>
-        <div><Organics /></div>
-        <div><General /></div>
       </section>
     </>
   )

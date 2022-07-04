@@ -22,7 +22,15 @@ function Recyclables () {
   })
 },[])
 
-  return 'RECYCLABLES'
+  return (
+    <ul>
+      {recycleState.map((item) => (
+        <li key={item.recyclable_id}>
+          {item.recyclable_item}
+        </li>
+      ))}
+    </ul>
+  )
 }
 
 export default Recyclables
