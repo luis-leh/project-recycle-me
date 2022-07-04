@@ -3,7 +3,8 @@ import Recyclables from './Recyclables'
 import Organics from './Organics'
 import General from './General'
 
-function App () {
+function App () { 
+
   return (
     <>
       <header className="header">
@@ -12,8 +13,6 @@ function App () {
       </header>
       <section className="main">
         <div><Recyclables /></div>
-        <div><Organics /></div>
-        <div><General /></div>
       </section>
     </>
   )
