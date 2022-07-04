@@ -1,5 +1,7 @@
 import React from 'react'
 
-function Organics () {}
+function Organics () {
+  return 'Organics Waste'
+}
 
 export default Organics

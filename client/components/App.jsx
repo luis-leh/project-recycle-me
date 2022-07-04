@@ -11,9 +11,9 @@ function App () {
         <img className="headerImage" src="./images/recycling-symbol-1.png" alt="Recyling symbol arrows" />
       </header>
       <section className="main">
-        {/* <Recyclables />
-        <Organics />
-        <General /> */}
+        <div><Recyclables /></div>
+        <div><Organics /></div>
+        <div><General /></div>
       </section>
     </>
   )
