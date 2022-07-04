@@ -1,7 +1,28 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
+
+import { getAllOrganics } from '../apis/apiClient'
 
 function Organics () {
-  return 'Organics Waste'
+  const [organicState, setOrganicState] = useState([
+    {
+      organic_id:'',
+      organic_item:'',
+      organice_item_image:'',
+    }
+  ])
+
+  useEffect(() => {
+    getAllOrganics()
+    .then((results) => {
+      console.log(results)
+      setOrganicState(results)
+    })
+    .catch((err) => {
+      console.error(err.message)
+    })
+  },[])
+  
+  return 'ORGANICS'
 }
 
 export default Organics
