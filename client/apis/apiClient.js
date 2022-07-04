@@ -7,6 +7,7 @@ export function getAllRecyclables() {
   return request
     .get(recyclablesUrl)
     .then((response) => {
+      // console.log(response)
       const recyclables = response.body
       return recyclables
     })

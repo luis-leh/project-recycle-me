@@ -1,22 +1,27 @@
-const environment = process.env.NODE_ENV || 'developoment'
+const environment = process.env.NODE_ENV || 'development'
 
 const config = require('./knexfile')[environment]
 
-const db = require('knex')(config)
+const connection = require('knex')(config)
 
 // DB FUNCTIONS GO HERE
-
 // GET
-function getAllRecyclables() {
+function getAllRecyclables(db = connection) {
   return db('recyclables').select()
 }
 
-function getAllOrganics() {
+function getAllOrganics(db = connection) {
   return db('organics').select()
 }
 
-function getAllGeneral() {
+function getAllGeneral(db = connection) {
   return db('general').select()
+}
+
+module.exports = {
+  getAllRecyclables,
+  getAllOrganics,
+  getAllGeneral,
 }
 
 // -----STILL NOT WORKING-----
@@ -34,11 +39,3 @@ function getAllGeneral() {
 // POST
 // UPDATE
 // DELETE
-
-module.exports = {
-  db,
-  getAllRecyclables,
-  getAllOrganics,
-  getAllGeneral,
-  // getAllWaste,
-}
