@@ -3,7 +3,8 @@ import Recyclables from './Recyclables'
 import Organics from './Organics'
 import General from './General'
 
-function App () {
+function App () { 
+
   return (
     <>
       <header className="header">
