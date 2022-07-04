@@ -18,24 +18,12 @@ function getAllGeneral(db = connection) {
   return db('general').select()
 }
 
+// POST
+// UPDATE
+// DELETE
+
 module.exports = {
   getAllRecyclables,
   getAllOrganics,
   getAllGeneral,
 }
-
-// -----STILL NOT WORKING-----
-// -----SCRAPPED IDEA / NOT IDEAL-----
-// function getAllWaste() {
-//   return db('recyclables', 'organics', 'general')
-//     .join(
-//       'recyclables.recyclable_id',
-//       'organics.organic_id',
-//       'general.general_id'
-//     )
-//     .select()
-// }
-
-// POST
-// UPDATE
-// DELETE
